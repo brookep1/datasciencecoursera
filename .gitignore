@@ -1,22 +1,21 @@
 
 # Data and Data Sources
 .RData
-.csv
-.xlsx
-.tsv
-.xls
-.DS_Store
+*.csv
+*.xlsx
+*.tsv
+*.xls
+*.DS_Store
 
 # History files
-.Rhistory
-.Rapp.history
+*.Rhistory
+*.Rapp.history
 
 # Example code in package build process
 *-Ex.R
 
 # RStudio files
 .Rproj.user/
-
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
@@ -48,14 +47,6 @@ Session.vim
 .netrwhist
 *~
 
-
-# Vim
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
 
 _Store
 .AppleDouble
@@ -257,9 +248,3 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
-=======
-# R data files from past sessions
-.Rdata
-
-# RStudio files
-.Rproj.user/
