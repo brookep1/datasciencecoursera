@@ -26,16 +26,22 @@ Once downloaded and unzip the specifics of the raw data are in the following fil
  UCI HAR Dataset/features_info.txt  
  UCI HAR Dataset/README.txt
 
+## Analysis Goal
+The goal of this analysis is to take the provided instrument metrics relating to the experiment
+and compute  the means of these instrument metrics aggregated by each participant and by their experiement activities
+
+The results of the experiment are in the file "UCIHAR_meanSet_tidy.txt"
+
 ### The analysis is done with run_analysis.R
 1. go to the directory with run_analysis.R
 2. source("run_analysis.R")
 3. it will print out some information about it's status, wait for the message "run_analysis.R is completed"
 
-run_analysis.R will create the file "UCIHAR_meanSet_tidy.txt in the current directory
+run_analysis.R will create the file "UCIHAR_meanSet_tidy.txt" in the current directory 
 
 See CodeBook.md for a description of that file contents
 
-## Functionis Breakdown
+## Functional Breakdown
 
 ### run_analysis.R 
 run_analysis.R is the main program
