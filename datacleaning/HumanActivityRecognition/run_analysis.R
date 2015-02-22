@@ -1,0 +1,21 @@
+#####
+# run_analysis.R
+####
+# This script does the following
+#1. Merges the training and the test sets to create one data set.
+#2. Extracts the measurements on the mean and standard deviation for each measurement. 
+#3. Changes the names of the activities in the data set
+#4. Labels the data set with new variable names. 
+#5. Creates a new data set with the average of each variable for each activity and each subject.
+
+##
+# Before running the script download the data and do the steps as outlined in the README.md
+##
+
+# Activity Labels for the dataset
+
+
+# Load the column names from the features file
+
+
+colNames <- retrieveColnames()

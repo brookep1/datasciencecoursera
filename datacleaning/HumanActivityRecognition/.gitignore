@@ -1,6 +1,5 @@
-# more stuff
-*.jpg
-*.pdf
+# This directory has text files as data files
+*.txt
 
 # Compression
 *.zip
@@ -9,6 +8,10 @@
 *.tgz
 *.Z
 *.gzip
+
+# more stuff
+*.jpg
+*.pdf
 
 # Data and Data Sources
 .RData
