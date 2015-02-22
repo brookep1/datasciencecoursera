@@ -17,5 +17,13 @@
 
 # Load the column names from the features file
 
+dataDir = "UCI HAR Dataset"
+# There are 561 Feature Labels and 6 Activity Labes
+featureLabels <- retrieveFeatureLabels(dir=dataDir)
+activityLavels <- retrieveActivityLabels(dir="UCI HAR Dataset")
 
-colNames <- retrieveColnames()
+foreach group in (c("test","train")) {
+    subjects$`group` <- retrieveSubjects(group="test",dir=dataDir) 
+    activities$`group` <- retrieveActivities(group="test", dir=dataDir) 
+    records$`group` <- retrieveRecords(group="test", dir=dataDir) 
+}

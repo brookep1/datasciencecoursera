@@ -1,10 +1,7 @@
 #####
-# load_raw_records.R
+# retrieveFuncs.R
 ####
-# This script reads and loads all of the data in the
-# UCI HAR Dataset into two datasets
-# One dataset for the "train" data and one for the "test" data
-# It assumes your current working directory has "UCI HAR Dataset" as a subdirectory
+# These functions will load the raw data and index files
 
 retrieveFeatureLabels <- function (dir="UCI HAR Dataset") { 
     # The column numbers and names are in features.txt
@@ -43,5 +40,3 @@ retrieveActivities <- function (group, dir="UCI HAR Dataset") {
     ids <- NULL
     ids    
 }
-
-#}
