@@ -26,6 +26,7 @@ Note that "meanFreq()" was not maintained
 ### The 66 metrics represented in the analysis results
 "AVG_" was prepended to each metric name to denote that it is aggregated by average
 
+`
 "AVG_tBodyAcc-mean-X"           "AVG_tBodyAcc-mean-Y"          
 "AVG_tBodyAcc-mean-Z"           "AVG_tBodyAcc-std-X"           
 "AVG_tBodyAcc-std-Y"            "AVG_tBodyAcc-std-Z"           
@@ -59,6 +60,7 @@ Note that "meanFreq()" was not maintained
 "AVG_fBodyBodyAccJerkMag-mean"  "AVG_fBodyBodyAccJerkMag-std"  
 "AVG_fBodyBodyGyroMag-mean"     "AVG_fBodyBodyGyroMag-std"     
 "AVG_fBodyBodyGyroJerkMag-mean" "AVG_fBodyBodyGyroJerkMag-std" 
+`
 
 Reference the "UCI Center for Machine Learning and Intelligent Systems" website for detailed breakdown of the 
 experiment and the computational information for each metric
