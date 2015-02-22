@@ -1,3 +1,6 @@
+# more stuff
+*.jpg
+*.pdf
 
 # Data and Data Sources
 .RData
