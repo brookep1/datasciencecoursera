@@ -22,7 +22,7 @@ limit=5
 dataDir = "UCI HAR Dataset"
 
 # Makes the dataset, using it as a function to clean up variables not needed afterwards
-makeDataset <- function(rows=limit,dir=dataDir
+makeDataset <- function(rows=limit,dir=dataDir) {
     if (!is.null(rows)) {
         message(paste0("Rows limited to ",rows))
     } else if (!is.null(limit)) {
