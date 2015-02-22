@@ -41,7 +41,8 @@ run_analysis.R will create the file "UCIHAR_meanSet_tidy.txt" in the current dir
 
 See CodeBook.md for a description of that file contents
 
-## Functional Breakdown
+## R Script Notes
+see the source for more comments
 
 ### run_analysis.R 
 run_analysis.R is the main program
