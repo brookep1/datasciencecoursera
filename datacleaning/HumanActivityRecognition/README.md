@@ -21,6 +21,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 2. unzip those files into that directory. It will create a "UCI HAR Dataset" directory
 
 Once downloaded and unzip the specifics of the raw data are in the following files
+
  UCI HAR Dataset/activity_labels.txt
  UCI HAR Dataset/features.txt  
  UCI HAR Dataset/features_info.txt  
