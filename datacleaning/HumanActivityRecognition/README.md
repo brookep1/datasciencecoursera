@@ -30,6 +30,8 @@ Once downloaded and unzip the specifics of the raw data are in the following fil
 The goal of this analysis is to take the provided instrument metrics relating to the experiment
 and compute  the means of these instrument metrics aggregated by each participant and by their experiement activities
 
+Based on two factors, "Subject ID" and "Activity Name" the desired metrics are aggregated with a mean across the factors
+
 The results of the experiment are in the file "UCIHAR_meanSet_tidy.txt"
 
 ### The analysis is done with run_analysis.R
