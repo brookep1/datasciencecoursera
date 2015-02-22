@@ -10,47 +10,40 @@
 #6. Creates a new data set with the average of each variable for each activity and each subject.
 
 ##
-# Before running the script download the data and do the steps as outlined in the README.md
+# Before running the script download the data and 
+# do the steps as outlined in the README.md
 ##
+
+# The script requires the below three other scrips to be in
+# the same directory
 source("retrieveFuncs.R")
 source("getRecords.R")
+source("makeDataset.R")
 
 # Limit the number of rows for testing
-limit=5
+# A value of "-1" means all rows
+limit=-1
 
 # Set the location of the dataset
 dataDir = "UCI HAR Dataset"
 
-# Makes the dataset, using it as a function to clean up variables not needed afterwards
-makeDataset <- function(rows=limit,dir=dataDir) {
-    if (!is.null(rows)) {
-        message(paste0("Rows limited to ",rows))
-    } else if (!is.null(limit)) {
-        message(paste0("Limiting rows to ",limit))
-        rows = limit
-    } else {
-        message(paste0("Using all rows ",limit))
-        rows = -1
-    }
-    # There are 561 Feature Labels and 6 Activity Labes
-    featureLabels <- retrieveFeatureLabels(dir=dir)
-    activityLabels <- retrieveActivityLabels(dir=dir)
-    
-    # But we only want features with "mean()" and "stdev()"
-    # not including "meanFreq()"
-    # There are 66 of these variables        
-    # This will create a vector of the columns numbers we want
-    cols <- grep('.*(mean|std)[(]',featureLabels[,1])    
-    colNames <- grep('.*(mean|std)[(]',featureLabels[,1],value=T)    
-    # 
-    # binding together immediately to eliminate an intermediate variable
-    records <- rbind(
-        getRecords(group="train",dir=dir,rows=rows,cols=cols),
-        getRecords(group="test",dir=dir,rows=rows,cols=cols)
-    )
-    
-    message(paste0("getRecords: adding headers and ID columns"))
-    # Name the columns
-    names(records) <- c("SubjectID","ActivityID",colNames)
-    records
-}
+### regex to use for column matching
+# We only want features with "mean()" and "stdev()"
+# not including "meanFreq()"
+# There are 66 of these variables        
+###
+colRegex = '.*(mean|std)[(]'
+
+# Makes the dataset with all of the columns and activities having
+dataSet <- makeDataset(rows=limit,dir=dataDir,regex=colRegex)
+
+meanSet <- aggregate(
+    formula = . ~ SubjectID + ActivityName,
+    data = dataSet,
+    FUN = mean )
+
+#Change the column names to specify that they are an average
+oldNames <- names(meanSet)[3:68]
+names(meanSet)[3:68] <- gsub("(.*)","AVG_\\1",oldNames)
+
+write.table(meanSet,file="UCIHAR_meanSet_tidy.txt",row.name=FALSE)
