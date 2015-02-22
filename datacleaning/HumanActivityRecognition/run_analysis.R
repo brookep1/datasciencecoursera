@@ -47,3 +47,5 @@ oldNames <- names(meanSet)[3:68]
 names(meanSet)[3:68] <- gsub("(.*)","AVG_\\1",oldNames)
 
 write.table(meanSet,file="UCIHAR_meanSet_tidy.txt",row.name=FALSE)
+
+message("run_analysis.R is completed")
