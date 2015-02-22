@@ -24,7 +24,7 @@ Once downloaded and unzip the specifics of the raw data are in the following fil
 + UCI HAR Dataset/activity_labels.txt
 + UCI HAR Dataset/features.txt  
 + UCI HAR Dataset/features_info.txt 
-+  UCI HAR Dataset/README.txt
++ UCI HAR Dataset/README.txt
 
 ## Analysis Goal
 The goal of this analysis is to take the provided instrument metrics relating to the experiment
@@ -57,6 +57,7 @@ Within run_analysis.R are 3 variables that someone might set to change it's beha
 + colRegex is a regular expression that is used to determine which raw data columns are kept. Currently it is set to keep the "mean()" and "std()" variables
 
 Process Notes:
+
 1. run_analysis.R calls "makeDataset" to retrieve the main dataset. The bulk of data transformation is done in that function
 2. run_analysis.R does the aggregation of that data set by mean. It is aggregated by the Activity Name and the Subject's ID number
 
